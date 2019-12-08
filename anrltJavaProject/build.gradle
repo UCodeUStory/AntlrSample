@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/antlr-4.7.2-complete.jar')
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
