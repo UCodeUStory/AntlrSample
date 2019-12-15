@@ -32,6 +32,7 @@ public class Translate {
 
             ParseTree tree = parser.init(); //针对init规则，开始语法分析
 
+
             System.out.println(tree.toStringTree(parser));//用LISP风格打印生成的树
 
             /**
@@ -43,6 +44,14 @@ public class Translate {
 
             //遍历语法分析过程中的生成的语法分析树，触发回调
             walker.walk(new ShortToUnicodeString(),tree);
+            System.out.println("----main---end");
+            /**
+             * 测试通过用例
+             * {1,2,3}
+             * {1,{2}}
+             * {{2}}
+             * {1,2,{3,4}}
+             */
 
         } catch (IOException e) {
             e.printStackTrace();
